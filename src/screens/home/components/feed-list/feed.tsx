@@ -42,13 +42,13 @@ const Feed = ({
       m={1}
       onClick={moveTo}
     >
-      <Typography variant="h4">
-        <Link style={{ textDecoration: 'none' }} to={permalink}>
-          {title}
-        </Link>
-      </Typography>
-      <Box display="flex" justifyContent="center">
+      <Box display="flex" justifyContent="space-around" alignContent="center" alignItems="center">
         {thumbnail !== 'self' && <img src={thumbnail} alt={title} />}
+        <Typography variant="h4">
+          <Link style={{ textDecoration: 'none' }} to={permalink}>
+            {title}
+          </Link>
+        </Typography>
       </Box>
       <Box display="flex" justifyContent="space-between">
         <Typography alignContent="right" textAlign="right" as="h5" m={0}>
