@@ -43,7 +43,7 @@ const Feed = ({
       onClick={moveTo}
     >
       <Box display="flex" justifyContent="space-around" alignContent="center" alignItems="center">
-        {thumbnail !== 'self' && <img src={thumbnail} alt={title} />}
+        {thumbnail !== 'self' && thumbnail !== '' && <img src={thumbnail} alt={title} />}
         <Typography variant="h4">
           <Link style={{ textDecoration: 'none' }} to={permalink}>
             {title}
