@@ -41,19 +41,15 @@ const HomeScreen = () => {
     [fetch]
   );
 
-  const onNextClick = useCallback(() => fetch({ after: data.after, count: limit + data.dist }), [
-    data.after,
-    data.dist,
-    fetch,
-    limit,
-  ]);
+  const onNextClick = useCallback(
+    () => fetch({ limit, after: data.after, count: limit + data.dist }),
+    [data.after, data.dist, fetch, limit]
+  );
 
-  const onPrevClick = useCallback(() => fetch({ before: data.before, count: data.dist + limit }), [
-    data.before,
-    data.dist,
-    fetch,
-    limit,
-  ]);
+  const onPrevClick = useCallback(
+    () => fetch({ limit, before: data.before, count: data.dist + limit }),
+    [data.before, data.dist, fetch, limit]
+  );
 
   return (
     <Box p={20} display="flex" flexDirection="column">
